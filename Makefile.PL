@@ -4,8 +4,11 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     'NAME'		=> 'Spreadsheet::WriteExcel::Simple::Save',
     'VERSION_FROM'	=> 'Save.pm', # finds $VERSION
-    'PREREQ_PM'		=> {}, # e.g., Module::Name => 1.1
+    'PREREQ_PM'		=> {
+			    Spreadsheet::WriteExcel::Simple => '0.03'
+
+}, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM => 'Save.pm', # retrieve abstract from module
-       AUTHOR     => 'A. U. Thor <a.u.thor@a.galaxy.far.far.away>') : ()),
+       AUTHOR     => 'T. M. Brannon <tbone@cpan.org>') : ()),
 );
