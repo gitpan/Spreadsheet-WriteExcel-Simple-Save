@@ -6,7 +6,8 @@ WriteMakefile(
     'VERSION_FROM'	=> 'Save.pm', # finds $VERSION
     'PREREQ_PM'		=> {
 			    Spreadsheet::WriteExcel => '0.42',
-
+			    File::Temp => '0.14',
+			    Spreadsheet::ParseExcel => '0.26',
 			    Spreadsheet::WriteExcel::Simple => '0.03'
 
 }, # e.g., Module::Name => 1.1

@@ -30,7 +30,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(
 	
 );
-our $VERSION = '0.03';
+our $VERSION = '0.05';
 
 
 # Preloaded methods go here.
@@ -41,6 +41,8 @@ sub Spreadsheet::WriteExcel::Simple::save {
     my $save_name = shift or croak "must supply save file name";
 
     my $savef = new FileHandle ">$save_name" or die $!;
+
+    binmode($savef);
     
     $savef->print($self->data);
 
